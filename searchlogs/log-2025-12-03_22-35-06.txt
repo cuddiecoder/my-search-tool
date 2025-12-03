@@ -1,0 +1,13 @@
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:echo "Linux Permission Audit Report" > $REPORT
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:echo "Generated on: $(date)" >> $REPORT
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:echo "========================================" >> $REPORT
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:echo "[+] Listing files and permissions..." >> $REPORT
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:ls -lR sample-directory >> $REPORT
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:echo -e "\n[+] Searching for world-writable files..." >> $REPORT
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:find sample-directory -type f -perm -o+w >> $REPORT
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:echo -e "\n[+] Searching for files with SUID bit set..." >> $REPORT
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:find / -perm -4000 2>/dev/null >> $REPORT
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:echo -e "\n[+] Searching for files with SGID bit set..." >> $REPORT
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:find / -perm -2000 2>/dev/null >> $REPORT
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:echo -e "\n[+] Permission audit completed!" >> $REPORT
+/home/kali/Cybersec/linux-permission-auditor/auditor.sh:echo "Report saved to: $REPORT"
