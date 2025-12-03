@@ -1,0 +1,13 @@
+# Ignore search logs
+searchlogs/
+
+# Ignore swap files created by editors
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional: ignore any temporary files
+*.tmp
