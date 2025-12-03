@@ -4,7 +4,7 @@
 mkdir -p searchlogs
 
 echo "========================="
-echo "     MY SEARCH TOOL      "
+echo "  WELCOME TO MY SEARCH TOOL      "
 echo "========================="
 echo "1) Search for a file"
 echo "2) Search for a folder"
